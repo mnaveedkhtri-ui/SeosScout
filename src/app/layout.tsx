@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 
-const SITE_URL = "https://seos-scout.vercel.app";
+const SITE_URL = "https://seo-scout-azure.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
