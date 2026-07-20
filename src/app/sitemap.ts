@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 // TODO: keep this in sync with the domain set in src/app/layout.tsx.
-const SITE_URL = "https://sitescout.app";
+const SITE_URL = "https://seos-scout.vercel.app/";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
