@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
       { status: 400 }
     );
   }
-  if (getUserByEmail(email)) {
+  if (await getUserByEmail(email)) {
     return NextResponse.json(
       { error: "An account with this email already exists." },
       { status: 409 }

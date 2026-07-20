@@ -1,5 +1,4 @@
-import fs from "fs";
-import path from "path";
+import { Redis } from "@upstash/redis";
 import bcrypt from "bcryptjs";
 
 // Every account is on the free plan — SiteScout has no paid tiers.
@@ -15,36 +14,31 @@ export interface StoredUser {
   createdAt: string;
 }
 
-const DATA_DIR = path.join(process.cwd(), "data");
-const DATA_FILE = path.join(DATA_DIR, "users.json");
+// Vercel's Upstash-for-Redis integration sets KV_REST_API_URL /
+// KV_REST_API_TOKEN (not the UPSTASH_REDIS_REST_* names that
+// Redis.fromEnv() looks for by default), so we read them explicitly.
+const redis = new Redis({
+  url: process.env.KV_REST_API_URL!,
+  token: process.env.KV_REST_API_TOKEN!,
+});
 
-function ensureFile() {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-  if (!fs.existsSync(DATA_FILE)) fs.writeFileSync(DATA_FILE, "[]", "utf-8");
+function emailKey(email: string) {
+  return `user:email:${email.trim().toLowerCase()}`;
 }
 
-function readAll(): StoredUser[] {
-  ensureFile();
-  try {
-    const raw = fs.readFileSync(DATA_FILE, "utf-8");
-    return JSON.parse(raw) as StoredUser[];
-  } catch {
-    return [];
-  }
+function idKey(id: string) {
+  return `user:id:${id}`;
 }
 
-function writeAll(users: StoredUser[]) {
-  ensureFile();
-  fs.writeFileSync(DATA_FILE, JSON.stringify(users, null, 2), "utf-8");
+export async function getUserByEmail(email: string): Promise<StoredUser | undefined> {
+  const user = await redis.get<StoredUser>(emailKey(email));
+  return user ?? undefined;
 }
 
-export function getUserByEmail(email: string): StoredUser | undefined {
-  const normalized = email.trim().toLowerCase();
-  return readAll().find((u) => u.email.toLowerCase() === normalized);
-}
-
-export function getUserById(id: string): StoredUser | undefined {
-  return readAll().find((u) => u.id === id);
+export async function getUserById(id: string): Promise<StoredUser | undefined> {
+  const email = await redis.get<string>(idKey(id));
+  if (!email) return undefined;
+  return getUserByEmail(email);
 }
 
 export async function createUser(input: {
@@ -53,27 +47,30 @@ export async function createUser(input: {
   email: string;
   password: string;
 }): Promise<StoredUser> {
-  const users = readAll();
-  if (users.some((u) => u.email.toLowerCase() === input.email.toLowerCase())) {
+  const normalizedEmail = input.email.trim().toLowerCase();
+  const existing = await getUserByEmail(normalizedEmail);
+  if (existing) {
     throw new Error("An account with this email already exists.");
   }
+
   const passwordHash = await bcrypt.hash(input.password, 10);
   const user: StoredUser = {
     id: crypto.randomUUID(),
     firstName: input.firstName.trim(),
     lastName: input.lastName.trim(),
-    email: input.email.trim().toLowerCase(),
+    email: normalizedEmail,
     passwordHash,
     plan: "free",
     createdAt: new Date().toISOString(),
   };
-  users.push(user);
-  writeAll(users);
+
+  await redis.set(emailKey(user.email), user);
+  await redis.set(idKey(user.id), user.email);
   return user;
 }
 
 export async function verifyPassword(email: string, password: string): Promise<StoredUser | null> {
-  const user = getUserByEmail(email);
+  const user = await getUserByEmail(email);
   if (!user || !user.passwordHash) return null;
   const ok = await bcrypt.compare(password, user.passwordHash);
   return ok ? user : null;
@@ -81,25 +78,26 @@ export async function verifyPassword(email: string, password: string): Promise<S
 
 // Used by the Google provider: find an existing account by email, or create
 // a passwordless one on first sign-in.
-export function findOrCreateGoogleUser(input: {
+export async function findOrCreateGoogleUser(input: {
   email: string;
   firstName: string;
   lastName: string;
-}): StoredUser {
-  const existing = getUserByEmail(input.email);
+}): Promise<StoredUser> {
+  const normalizedEmail = input.email.trim().toLowerCase();
+  const existing = await getUserByEmail(normalizedEmail);
   if (existing) return existing;
 
-  const users = readAll();
   const user: StoredUser = {
     id: crypto.randomUUID(),
     firstName: input.firstName || "Google",
     lastName: input.lastName || "User",
-    email: input.email.trim().toLowerCase(),
+    email: normalizedEmail,
     passwordHash: null,
     plan: "free",
     createdAt: new Date().toISOString(),
   };
-  users.push(user);
-  writeAll(users);
+
+  await redis.set(emailKey(user.email), user);
+  await redis.set(idKey(user.id), user.email);
   return user;
 }

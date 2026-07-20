@@ -40,7 +40,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       // Credentials sign-in already validated the account in `authorize`.
       if (account?.provider === "google" && user.email) {
         const [firstName, ...rest] = (user.name ?? "Google User").split(" ");
-        findOrCreateGoogleUser({
+        await findOrCreateGoogleUser({
           email: user.email,
           firstName,
           lastName: rest.join(" "),
@@ -53,7 +53,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       // without re-reading the store each time.
       const email = user?.email ?? token.email;
       if (email) {
-        const stored = getUserByEmail(email);
+        const stored = await getUserByEmail(email);
         if (stored) {
           token.plan = stored.plan;
           token.firstName = stored.firstName;
