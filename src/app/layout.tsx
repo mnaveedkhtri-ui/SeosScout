@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "@/components/providers";
-
 const SITE_URL = "https://seo-scout-azure.vercel.app";
-
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -29,6 +27,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: {
+    google: "wYFUIXoVNRkPCSeAExJZhbNGbE9pcbuFswY8d8GCIdw",
+  },
   openGraph: {
     type: "website",
     url: SITE_URL,
@@ -44,7 +45,6 @@ export const metadata: Metadata = {
       "Run a full technical, content, and performance SEO audit on any URL, free, no signup required.",
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
