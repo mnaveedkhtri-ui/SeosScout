@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 
-// TODO: replace with your real deployed domain once you go live (Vercel/custom domain).
-const SITE_URL = "https://sitescout.app";
+const SITE_URL = "https://seos-scout.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
