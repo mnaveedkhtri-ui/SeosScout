@@ -9,7 +9,6 @@ import {
   Sparkles,
   ArrowRight,
 } from "lucide-react";
-import { Navbar } from "@/components/layout/navbar";
 import { UrlInputForm } from "@/components/audit/url-input-form";
 import { Card } from "@/components/ui/card";
 
@@ -75,7 +74,6 @@ export default function LandingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(SOFTWARE_SCHEMA) }}
       />
-      <Navbar />
 
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-6 pt-24 pb-16 text-center">
