@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 import { Navbar } from "@/components/layout/navbar";
-
+import { Footer } from "@/components/layout/footer";
 const SITE_URL = "https://seos-scout.vercel.app";
 const SITE_NAME = "SiteScout";
 const DEFAULT_TITLE = "SiteScout | Free SEO Audit Tool — Technical, Content & On-Page SEO";
 const DEFAULT_DESCRIPTION =
   "Run a full technical, content, and on-page SEO audit on any website in under a minute. Get a 0-100 score, prioritized fixes, and shareable reports — 100% free.";
-
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -53,7 +52,6 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
 };
-
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -68,7 +66,6 @@ const jsonLd = {
     priceCurrency: "USD",
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -84,6 +81,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>
