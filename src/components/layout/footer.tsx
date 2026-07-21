@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Zap, Github, Twitter } from "lucide-react";
+import { Zap } from "lucide-react";
 
 const PRODUCT_LINKS = [
   { label: "Run an audit", href: "/audit" },
@@ -35,14 +35,6 @@ export function Footer() {
             <p className="mt-3 max-w-[22ch] text-sm text-muted">
               Real-time SEO audits. No mock data, no upsells.
             </p>
-            <div className="mt-5 flex items-center gap-3">
-              <a href="https://github.com" target="_blank" rel="noreferrer noopener" aria-label="SiteScout on GitHub" className="flex h-8 w-8 items-center justify-center rounded-lg border border-border text-muted transition-colors hover:text-foreground">
-                <Github size={15} />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer noopener" aria-label="SiteScout on Twitter" className="flex h-8 w-8 items-center justify-center rounded-lg border border-border text-muted transition-colors hover:text-foreground">
-                <Twitter size={15} />
-              </a>
-            </div>
           </div>
 
           <div>
