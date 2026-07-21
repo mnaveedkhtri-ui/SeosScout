@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { blogPosts } from "@/data/blog-posts";
 
 export const metadata = {
@@ -35,15 +36,20 @@ export default function BlogPage() {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="block border border-gray-800 rounded-xl p-6 hover:border-indigo-500 transition-colors"
+              className="block border border-gray-800 rounded-xl overflow-hidden hover:border-indigo-500 transition-colors"
             >
-              <div className="flex items-center gap-3 text-sm text-indigo-400 mb-2">
-                <span>{post.category}</span>
-                <span>•</span>
-                <span>{post.readTime}</span>
+              <div className="relative w-full h-56">
+                <Image src={post.image} alt={post.imageAlt} fill className="object-cover" />
               </div>
-              <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
-              <p className="text-gray-400">{post.excerpt}</p>
+              <div className="p-6">
+                <div className="flex items-center gap-3 text-sm text-indigo-400 mb-2">
+                  <span>{post.category}</span>
+                  <span>•</span>
+                  <span>{post.readTime}</span>
+                </div>
+                <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
+                <p className="text-gray-400">{post.excerpt}</p>
+              </div>
             </Link>
           ))}
         </div>
