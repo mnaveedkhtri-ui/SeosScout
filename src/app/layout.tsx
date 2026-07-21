@@ -1,50 +1,73 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "@/components/providers";
+
 const SITE_URL = "https://seos-scout.vercel.app";
+const SITE_NAME = "SiteScout";
+const DEFAULT_TITLE = "SiteScout | Free SEO Audit Tool — Technical, Content & On-Page SEO";
+const DEFAULT_DESCRIPTION =
+  "Run a full technical, content, and on-page SEO audit on any website in under a minute. Get a 0-100 score, prioritized fixes, and shareable reports — 100% free.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "SiteScout | Free SEO Audit Tool — Technical, Content & Speed Checks",
+    default: DEFAULT_TITLE,
     template: "%s | SiteScout",
   },
-  description:
-    "Run a full technical, content, and performance SEO audit on any URL, free, no signup required. Get a 0-100 score, prioritized fixes, real Core Web Vitals, and a downloadable PDF report.",
+  description: DEFAULT_DESCRIPTION,
   keywords: [
     "free seo audit tool",
-    "seo checker",
-    "website seo audit",
-    "core web vitals checker",
-    "seo score checker",
+    "seo audit",
+    "website seo checker",
     "technical seo audit",
+    "on-page seo checker",
+    "seo score",
   ],
-  authors: [{ name: "SiteScout" }],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true },
-  },
   alternates: {
     canonical: "/",
   },
-  verification: {
-    google: "wYFUIXoVNRkPCSeAExJZhbNGbE9pcbuFswY8d8GCIdw",
+  robots: {
+    index: true,
+    follow: true,
   },
   openGraph: {
     type: "website",
     url: SITE_URL,
-    siteName: "SiteScout",
-    title: "SiteScout | Free SEO Audit Tool",
-    description:
-      "Run a full technical, content, and performance SEO audit on any URL, free, no signup required.",
+    siteName: SITE_NAME,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "SiteScout — Free SEO Audit Tool",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SiteScout | Free SEO Audit Tool",
-    description:
-      "Run a full technical, content, and performance SEO audit on any URL, free, no signup required.",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: ["/og-image.png"],
   },
 };
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "SiteScout",
+  applicationCategory: "SEO Tool",
+  operatingSystem: "Web",
+  url: SITE_URL,
+  description: DEFAULT_DESCRIPTION,
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -53,6 +76,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className="antialiased bg-[#08090b] text-zinc-100 font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Providers>{children}</Providers>
       </body>
     </html>
