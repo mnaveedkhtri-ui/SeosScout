@@ -36,22 +36,10 @@ export function Footer() {
               Real-time SEO audits. No mock data, no upsells.
             </p>
             <div className="mt-5 flex items-center gap-3">
-              
-                href="https://github.com"
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="SiteScout on GitHub"
-                className="flex h-8 w-8 items-center justify-center rounded-lg border border-border text-muted transition-colors hover:text-foreground"
-              >
+              <a href="https://github.com" target="_blank" rel="noreferrer noopener" aria-label="SiteScout on GitHub" className="flex h-8 w-8 items-center justify-center rounded-lg border border-border text-muted transition-colors hover:text-foreground">
                 <Github size={15} />
               </a>
-              
-                href="https://twitter.com"
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="SiteScout on Twitter"
-                className="flex h-8 w-8 items-center justify-center rounded-lg border border-border text-muted transition-colors hover:text-foreground"
-              >
+              <a href="https://twitter.com" target="_blank" rel="noreferrer noopener" aria-label="SiteScout on Twitter" className="flex h-8 w-8 items-center justify-center rounded-lg border border-border text-muted transition-colors hover:text-foreground">
                 <Twitter size={15} />
               </a>
             </div>
@@ -64,10 +52,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5">
               {PRODUCT_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-foreground/80 transition-colors hover:text-foreground"
-                  >
+                  <Link href={link.href} className="text-sm text-foreground/80 transition-colors hover:text-foreground">
                     {link.label}
                   </Link>
                 </li>
@@ -82,10 +67,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5">
               {COMPANY_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-foreground/80 transition-colors hover:text-foreground"
-                  >
+                  <Link href={link.href} className="text-sm text-foreground/80 transition-colors hover:text-foreground">
                     {link.label}
                   </Link>
                 </li>
@@ -100,10 +82,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5">
               {LEGAL_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-foreground/80 transition-colors hover:text-foreground"
-                  >
+                  <Link href={link.href} className="text-sm text-foreground/80 transition-colors hover:text-foreground">
                     {link.label}
                   </Link>
                 </li>
