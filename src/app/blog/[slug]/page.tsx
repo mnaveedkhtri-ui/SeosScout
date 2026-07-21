@@ -15,7 +15,6 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
-
   return {
     title: `${post.title} | SiteScout Blog`,
     description: post.excerpt,
@@ -35,10 +34,13 @@ export async function generateMetadata({
 }
 
 function formatInline(text: string) {
-  let result = text.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  let result = text.replace(
+    /\*\*(.+?)\*\*/g,
+    '<strong class="font-bold text-white">$1</strong>'
+  );
   result = result.replace(
     /\[(.+?)\]\((.+?)\)/g,
-    '<a href="$2" class="text-indigo-400 hover:underline">$1</a>'
+    '<a href="$2" class="text-indigo-400 underline underline-offset-2 hover:text-indigo-300">$1</a>'
   );
   return result;
 }
@@ -47,28 +49,26 @@ function renderContent(content: string) {
   const lines = content.split("\n");
   let html = "";
   let inList = false;
-
   for (const rawLine of lines) {
     const line = rawLine.trim();
     const imageMatch = line.match(/^!\[(.*?)\]\((.+?)\)$/);
-
     if (imageMatch) {
       if (inList) { html += "</ul>"; inList = false; }
       html += `<img src="${imageMatch[2]}" alt="${imageMatch[1]}" class="rounded-xl w-full my-6" />`;
     } else if (line.startsWith("## ")) {
       if (inList) { html += "</ul>"; inList = false; }
-      html += `<h2>${formatInline(line.slice(3))}</h2>`;
+      html += `<h2 class="text-2xl sm:text-3xl font-bold text-white mt-10 mb-4">${formatInline(line.slice(3))}</h2>`;
     } else if (line.startsWith("### ")) {
       if (inList) { html += "</ul>"; inList = false; }
-      html += `<h3>${formatInline(line.slice(4))}</h3>`;
+      html += `<h3 class="text-xl font-semibold text-white mt-8 mb-3">${formatInline(line.slice(4))}</h3>`;
     } else if (line.startsWith("- ")) {
-      if (!inList) { html += "<ul>"; inList = true; }
-      html += `<li>${formatInline(line.slice(2))}</li>`;
+      if (!inList) { html += '<ul class="list-disc pl-6 mb-5 space-y-2">'; inList = true; }
+      html += `<li class="text-zinc-300">${formatInline(line.slice(2))}</li>`;
     } else if (line === "") {
       if (inList) { html += "</ul>"; inList = false; }
     } else {
       if (inList) { html += "</ul>"; inList = false; }
-      html += `<p>${formatInline(line)}</p>`;
+      html += `<p class="text-zinc-300 mb-5 leading-relaxed">${formatInline(line)}</p>`;
     }
   }
   if (inList) html += "</ul>";
@@ -100,25 +100,20 @@ export default async function BlogPostPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
       <Link href="/blog" className="text-indigo-400 text-sm hover:underline">
         ← Back to Blog
       </Link>
-
       <div className="flex items-center gap-3 text-sm text-indigo-400 mt-6 mb-3">
         <span>{post.category}</span>
         <span>•</span>
         <span>{post.readTime}</span>
       </div>
-
       <h1 className="text-4xl font-bold mb-6">{post.title}</h1>
-
       <div className="relative w-full h-80 rounded-xl overflow-hidden mb-8">
         <Image src={post.image} alt={post.imageAlt} fill className="object-cover" priority />
       </div>
-
       <div
-        className="prose prose-invert max-w-none"
+        className="max-w-none"
         dangerouslySetInnerHTML={{ __html: renderContent(post.content) }}
       />
     </main>
