@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/navbar";
 import { UrlInputForm } from "@/components/audit/url-input-form";
 import { AuditResults } from "@/components/audit/audit-results";
+
+export const metadata: Metadata = {
+  title: "Run a Free SEO Audit — Instant Technical & Content Analysis",
+  description:
+    "Paste any website URL to run a live, full technical and content SEO audit — titles, meta tags, headings, canonical tags, robots.txt, sitemap, and more, in under a minute.",
+  alternates: { canonical: "/audit" },
+};
 
 export default async function AuditPage({
   searchParams,
