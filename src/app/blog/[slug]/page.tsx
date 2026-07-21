@@ -1,6 +1,7 @@
 import { blogPosts } from "@/data/blog-posts";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -28,6 +29,7 @@ export async function generateMetadata({
       url: `https://seos-scout.vercel.app/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
+      images: [post.image],
     },
   };
 }
@@ -48,8 +50,12 @@ function renderContent(content: string) {
 
   for (const rawLine of lines) {
     const line = rawLine.trim();
+    const imageMatch = line.match(/^!\[(.*?)\]\((.+?)\)$/);
 
-    if (line.startsWith("## ")) {
+    if (imageMatch) {
+      if (inList) { html += "</ul>"; inList = false; }
+      html += `<img src="${imageMatch[2]}" alt="${imageMatch[1]}" class="rounded-xl w-full my-6" />`;
+    } else if (line.startsWith("## ")) {
       if (inList) { html += "</ul>"; inList = false; }
       html += `<h2>${formatInline(line.slice(3))}</h2>`;
     } else if (line.startsWith("### ")) {
@@ -84,6 +90,7 @@ export default async function BlogPostPage({
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
+    image: post.image,
     author: { "@type": "Organization", name: "SiteScout" },
   };
 
@@ -105,6 +112,10 @@ export default async function BlogPostPage({
       </div>
 
       <h1 className="text-4xl font-bold mb-6">{post.title}</h1>
+
+      <div className="relative w-full h-80 rounded-xl overflow-hidden mb-8">
+        <Image src={post.image} alt={post.imageAlt} fill className="object-cover" priority />
+      </div>
 
       <div
         className="prose prose-invert max-w-none"
