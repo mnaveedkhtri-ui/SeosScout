@@ -32,6 +32,43 @@ export async function generateMetadata({
   };
 }
 
+function formatInline(text: string) {
+  let result = text.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  result = result.replace(
+    /\[(.+?)\]\((.+?)\)/g,
+    '<a href="$2" class="text-indigo-400 hover:underline">$1</a>'
+  );
+  return result;
+}
+
+function renderContent(content: string) {
+  const lines = content.split("\n");
+  let html = "";
+  let inList = false;
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+
+    if (line.startsWith("## ")) {
+      if (inList) { html += "</ul>"; inList = false; }
+      html += `<h2>${formatInline(line.slice(3))}</h2>`;
+    } else if (line.startsWith("### ")) {
+      if (inList) { html += "</ul>"; inList = false; }
+      html += `<h3>${formatInline(line.slice(4))}</h3>`;
+    } else if (line.startsWith("- ")) {
+      if (!inList) { html += "<ul>"; inList = true; }
+      html += `<li>${formatInline(line.slice(2))}</li>`;
+    } else if (line === "") {
+      if (inList) { html += "</ul>"; inList = false; }
+    } else {
+      if (inList) { html += "</ul>"; inList = false; }
+      html += `<p>${formatInline(line)}</p>`;
+    }
+  }
+  if (inList) html += "</ul>";
+  return html;
+}
+
 export default async function BlogPostPage({
   params,
 }: {
@@ -71,17 +108,7 @@ export default async function BlogPostPage({
 
       <div
         className="prose prose-invert max-w-none"
-        dangerouslySetInnerHTML={{
-          __html: post.content
-            .split("\n")
-            .map((line) => {
-              if (line.startsWith("## ")) return `<h2>${line.slice(3)}</h2>`;
-              if (line.startsWith("### ")) return `<h3>${line.slice(4)}</h3>`;
-              if (line.trim() === "") return "";
-              return `<p>${line}</p>`;
-            })
-            .join(""),
-        }}
+        dangerouslySetInnerHTML={{ __html: renderContent(post.content) }}
       />
     </main>
   );
