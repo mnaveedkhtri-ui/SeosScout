@@ -110,4 +110,29 @@ Internal links help search engines discover and understand the relationship betw
 - **Duplicate title tags** across multiple pages
 - **Missing alt text** on images, hurting both accessibility and image search rankings
 - **Thin content** under 300 words on pages meant to rank for competitive keywords
-- **Broken internal links** that create dead ends for both users
+- **Broken internal links** that create dead ends for both users and crawlers
+- **No HTTPS** or mixed content warnings
+- **Ignoring mobile Core Web Vitals** in favor of only optimizing desktop
+
+## Frequently Asked Questions
+
+**Is a free SEO score checker as accurate as paid tools?**
+For on-page and technical SEO factors, free checkers are generally very reliable since these signals are directly measurable from your page's code. Paid tools mainly add value through backlink databases and historical tracking, not more accurate on-page scoring.
+
+**How often should I check my SEO score?**
+Once a month for stable pages, and immediately after any major content update, redesign, or migration.
+
+**What's a good SEO score?**
+80+ is considered strong, 50-79 needs improvement, and below 50 suggests significant gaps that are actively hurting your rankings.
+
+**Does SEO score directly affect Google rankings?**
+Not as a single official Google metric, but the underlying factors it measures, like speed, mobile-friendliness, content quality, and structure, absolutely do affect rankings. Improving your score means improving the real things Google cares about.
+
+## Final Thoughts
+
+Your SEO score is a diagnostic snapshot, not a vanity number. Use it as a starting point: run a scan, fix your lowest-scoring category first, and re-check every few weeks as you make changes. Small, consistent improvements compound over time into real ranking gains.
+
+Ready to see where you stand? [Run your free audit now](/audit) and get your personalized improvement checklist in under a minute.
+    `,
+  },
+];
