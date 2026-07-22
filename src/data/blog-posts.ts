@@ -14,9 +14,9 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "free-seo-score-checker-tool-guide",
-    title: "Free SEO Score Checker: How to Analyze & Improve Your Website's SEO in 2026",
+    title: "Free SEO Score Checker Tool 2026 Check Your Score Free",
     excerpt:
-      "Discover how to check your website's SEO score for free, understand what each metric means, and follow a step-by-step action plan to boost your rankings on Google in 2026.",
+      "Run a free SEO score checker on your website. Get instant technical, on page and content scores plus a 7 day action plan to boost Google rankings.",
     date: "2026-07-21",
     readTime: "9 min read",
     category: "SEO Tools",
@@ -137,9 +137,9 @@ Ready to see where you stand? [Run your free audit now](/audit) and get your per
   },
   {
     slug: "best-wordpress-seo-plugin-guide-2026",
-    title: "Best WordPress SEO Plugins in 2026: Complete Setup Guide for Higher Rankings",
+    title: "Best WordPress SEO Plugin 2026 Setup Guide and Comparison",
     excerpt:
-      "A practical, no-fluff guide to choosing and configuring the right WordPress SEO plugin, with setup steps, must-change settings, and common mistakes to avoid.",
+      "Compare the best WordPress SEO plugins for 2026 and follow our step by step setup guide to configure sitemaps, meta tags and schema correctly.",
     date: "2026-07-21",
     readTime: "10 min read",
     category: "WordPress SEO",
@@ -251,9 +251,9 @@ Want to check how your site looks right now? [Run your free audit](/audit) and s
   },
   {
     slug: "how-to-increase-seo-of-your-website",
-    title: "How to Increase SEO of Your Website: A Complete 2026 Playbook",
+    title: "How to Increase SEO of Your Website 2026 Playbook",
     excerpt:
-      "A step by step playbook covering the technical fixes, content strategy, and link building tactics that actually move rankings, based on what search engines reward in 2026.",
+      "Learn how to increase your website's SEO with this complete 2026 playbook covering technical fixes, content strategy and link building tactics.",
     date: "2026-07-22",
     readTime: "11 min read",
     category: "SEO Strategy",
@@ -370,9 +370,9 @@ Not sure where your site currently stands? [Run a free SEO audit](/audit) and ge
   },
   {
     slug: "ecommerce-seo-audit-checklist",
-    title: "Ecommerce SEO Audit Checklist: 25 Things to Check Before You Lose Sales",
+    title: "Ecommerce SEO Audit Checklist 25 Point Guide 2026",
     excerpt:
-      "A practical, step by step ecommerce SEO audit checklist covering product pages, category structure, site speed, and technical fixes that actually protect your organic sales.",
+      "A 25 point ecommerce SEO audit checklist covering product pages, category structure, site speed and duplicate content fixes to protect sales.",
     date: "2026-07-22",
     readTime: "12 min read",
     category: "Ecommerce SEO",
