@@ -368,4 +368,136 @@ Increasing your SEO isn't about one dramatic change, it's about fixing the techn
 Not sure where your site currently stands? [Run a free SEO audit](/audit) and get a clear, prioritized list of what to fix first.
     `,
   },
+  {
+    slug: "ecommerce-seo-audit-checklist",
+    title: "Ecommerce SEO Audit Checklist: 25 Things to Check Before You Lose Sales",
+    excerpt:
+      "A practical, step by step ecommerce SEO audit checklist covering product pages, category structure, site speed, and technical fixes that actually protect your organic sales.",
+    date: "2026-07-22",
+    readTime: "12 min read",
+    category: "Ecommerce SEO",
+    keywords: [
+      "ecommerce seo audit checklist",
+      "ecommerce seo checklist",
+      "online store seo audit",
+      "product page seo",
+      "ecommerce technical seo",
+      "shopify seo checklist",
+      "category page seo",
+      "ecommerce seo tips",
+    ],
+    image: "/blog-images/ecommerce-seo-hero.jpg",
+    imageAlt: "Person reviewing an ecommerce store dashboard on a laptop with a sales traffic graph trending upward",
+    content: `
+## Why Ecommerce SEO Needs Its Own Checklist
+
+A regular blog and an online store don't have the same SEO problems. Product pages get discontinued and turn into dead links. Category pages often have almost no unique text. Filters and sorting options can create thousands of near duplicate URLs without anyone noticing. None of this shows up on a typical SEO checklist built for content sites.
+
+If you run an ecommerce store, it's worth starting with a general scan first. Our [free SEO audit tool](/audit) will flag a lot of the basics automatically, but the checklist below goes deeper into the store specific issues that quietly cost sales.
+
+## Part 1: Product Page SEO
+
+Product pages are usually where the actual revenue happens, so they deserve the most attention.
+
+- **Unique product titles.** Avoid using the manufacturer's generic title as your page title if competitors are doing the exact same thing. Add a distinguishing detail like size, color, or use case.
+- **Original product descriptions.** Copying manufacturer descriptions word for word creates duplicate content across the web. Rewrite at least the first paragraph in your own words.
+- **Structured data for products.** Schema markup that includes price, availability, and review ratings helps your listings show star ratings directly in search results, which tends to improve click-through rate.
+- **Out of stock handling.** Don't delete pages for out of stock products if they still get search traffic. Keep the page live, mark it clearly as out of stock, and suggest similar in stock items instead.
+- **Image optimization.** Compress product images and use descriptive file names and alt text, since a meaningful share of ecommerce traffic comes through image search.
+
+![Close-up of a smartphone showing a product page with price, reviews, and an add to cart button](/blog-images/ecommerce-seo-1.jpg)
+
+## Part 2: Category and Collection Pages
+
+Category pages often get ignored because they feel like they're just a list of products, but they're some of the highest value pages on a store for ranking broader, higher volume keywords.
+
+- Add a short block of genuinely useful text above or below the product grid, not filler paragraphs stuffed with keywords
+- Make sure category pages have their own unique title tag and meta description, not a duplicate of the homepage
+- Check that pagination (page 2, page 3, and so on) uses proper canonical tags so search engines don't treat each page as competing content
+- Avoid nesting categories so deep that a product is more than three or four clicks from the homepage
+
+## Part 3: Faceted Navigation and Duplicate Content
+
+This is the part of ecommerce SEO that causes the most quiet damage. Filters for size, color, price range, and sorting order can generate an enormous number of URL variations, and search engines can end up crawling thousands of near identical pages instead of your actual content.
+
+- Use canonical tags to point filtered and sorted URL variations back to the main category page
+- Block low value filter combinations from being indexed using your robots settings, while still allowing them to be crawled if users can link to them directly
+- Keep your XML sitemap limited to pages you actually want indexed, not every possible filter combination
+
+Google's documentation on [canonicalization](https://developers.google.com/search/docs/crawling-indexing/canonicalization) explains this in more technical detail if you want to see exactly how search engines decide which version of a duplicate page to show.
+
+## Part 4: Technical and Site Speed Checks
+
+Ecommerce sites tend to be heavier than blogs, with more images, scripts for cart functionality, and third party trackers, so speed issues show up more often here.
+
+- Run your top product and category pages through [PageSpeed Insights](https://pagespeed.web.dev/) and fix anything flagged in red
+- Compress and lazy load product images below the fold
+- Audit third party scripts (chat widgets, marketing pixels, review plugins) and remove anything that isn't actively used
+- Confirm your checkout flow doesn't accidentally block search engines through your robots settings, since this sometimes happens by mistake during a platform migration
+
+![Curved monitor showing an ecommerce analytics dashboard with a 90 out of 100 SEO score and product performance charts](/blog-images/ecommerce-seo-2.jpg)
+
+## Part 5: Internal Linking for Stores
+
+Internal linking works differently on ecommerce sites than on blogs. Instead of linking between articles, the goal is connecting related products, categories, and buying guides so both shoppers and search engines can move through your catalog easily.
+
+- Add a "related products" or "you may also like" section on every product page
+- Link from blog content back to relevant product or category pages, and vice versa
+- If you publish buying guides or comparison content, this connects naturally with the same principles covered in our guide on [how to increase SEO on your website](/blog/how-to-increase-seo-of-your-website), since the underlying internal linking logic is the same whether it's a blog post or a product catalog
+
+## Part 6: Reviews, Trust Signals, and Local Presence
+
+- Enable and encourage genuine product reviews, since review schema and fresh user generated content both help pages stay relevant over time
+- Make sure your return policy, shipping information, and contact details are easy to find, since Google's helpful content guidance increasingly rewards pages that clearly demonstrate trustworthiness
+- If you have a physical location, keep your Google Business Profile updated and consistent with your site's contact information
+
+## The Full 25 Point Checklist
+
+1. Unique, keyword relevant product titles
+2. Original product descriptions, not copied from manufacturers
+3. Product schema markup with price and availability
+4. Proper handling of out of stock and discontinued products
+5. Compressed, descriptively named product images with alt text
+6. Unique category page titles and meta descriptions
+7. Useful text content on category pages
+8. Canonical tags on paginated category pages
+9. Shallow site structure, most products within three or four clicks
+10. Canonical tags on filtered and sorted URL variations
+11. Indexing rules that exclude low value filter combinations
+12. Clean, focused XML sitemap
+13. Fast loading product and category pages
+14. Compressed and lazy loaded images
+15. Minimal unnecessary third party scripts
+16. No accidental blocking of important pages in robots settings
+17. Related products sections on product pages
+18. Internal links between blog content and relevant products
+19. Genuine product reviews with schema markup
+20. Clear return, shipping, and contact information
+21. Mobile-friendly checkout and product pages
+22. HTTPS across the entire store, including checkout
+23. Breadcrumb navigation with schema markup
+24. Consistent NAP (name, address, phone) if you have a physical location
+25. Regular re-audits after major platform or theme changes
+
+## Frequently Asked Questions
+
+**How often should I audit my ecommerce store's SEO?**
+Once every two to three months for an active store, and immediately after any platform migration, theme change, or major catalog update.
+
+**Do product filters really hurt SEO that much?**
+On larger catalogs, yes. Unmanaged filter combinations can create thousands of thin, duplicate pages that dilute how search engines see the rest of the site. Smaller stores feel this less, but it's still worth checking early.
+
+**Should every product have its own page even with low stock?**
+Generally yes, as long as the product still gets search traffic. Removing pages entirely creates broken links and throws away any ranking history that page had built up.
+
+**Is Shopify or WooCommerce better for SEO out of the box?**
+Both can perform well with the right setup. WooCommerce gives more direct control over technical details since it runs on WordPress, while Shopify handles more of the technical basics automatically but requires apps for some advanced customization.
+
+## Final Thoughts
+
+Ecommerce SEO issues rarely show up as one obvious problem. They build up slowly through duplicate filter pages, thin category content, and product pages that never got proper titles or descriptions in the first place. Working through this checklist once, then repeating it every couple of months, catches most of these issues before they start costing meaningful traffic and sales.
+
+Want a starting point for your own store? [Run a free SEO audit](/audit) and see exactly which of these areas need attention first.
+    `,
+  },
 ];
