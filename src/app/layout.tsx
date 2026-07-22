@@ -6,10 +6,9 @@ import { Footer } from "@/components/layout/footer";
 
 const SITE_URL = "https://seos-scout.vercel.app";
 const SITE_NAME = "SiteScout";
-const DEFAULT_TITLE = "SiteScout | Free SEO Audit Tool — Technical, Content & On-Page SEO";
+const DEFAULT_TITLE = "SiteScout | Free SEO Audit Tool for Technical, Content & On-Page SEO";
 const DEFAULT_DESCRIPTION =
-  "Run a full technical, content, and on-page SEO audit on any website in under a minute. Get a 0-100 score, prioritized fixes, and shareable reports — 100% free.";
-
+  "Run a full technical, content, and on-page SEO audit on any website in under a minute. Get a 0 to 100 score, prioritized fixes, and shareable reports, completely free.";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
