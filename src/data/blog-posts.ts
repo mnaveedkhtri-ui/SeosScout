@@ -14,7 +14,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "free-seo-score-checker-tool-guide",
-    title: "Free SEO Score Checker Tool 2026 Check Your Score Free",
+    title: "Free SEO Score Checker Tool 2026 Check Your Score for Free",
     excerpt:
       "Run a free SEO score checker on your website. Get instant technical, on page and content scores plus a 7 day action plan to boost Google rankings.",
     date: "2026-07-21",
