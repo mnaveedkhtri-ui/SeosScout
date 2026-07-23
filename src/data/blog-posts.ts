@@ -573,8 +573,6 @@ Pages that exist in isolation, with no links pointing to them from anywhere else
 
 **The fix:** Every time you publish something new, link back to two or three older, relevant pages. Our guide on [how to increase SEO on your website](/blog/how-to-increase-seo-of-your-website) covers internal linking strategy in more depth if this is an area you want to strengthen.
 
-![Redirect manager dashboard showing a broken link being fixed with a permanent redirect](/blog-images/fix-broken-links-2.jpg)
-
 ## Mistake 8: Ignoring Mobile Layout
 
 Google evaluates the mobile version of a page first, not desktop, so a page that looks fine on a large monitor but breaks or requires horizontal scrolling on a phone will lose ranking potential regardless of how strong the content is.
