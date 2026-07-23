@@ -10,7 +10,6 @@ const PRODUCT_LINKS = [
 
 const COMPANY_LINKS = [
   { label: "Blog", href: "/blog" },
-  { label: "Pricing", href: "/pricing" },
   { label: "Contact Us", href: "/contact" },
 ];
 
