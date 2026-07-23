@@ -613,4 +613,110 @@ None of these mistakes are complicated to fix individually. The reason they matt
 Want to see which of these apply to your own pages? [Run a free SEO audit](/audit) and get a clear, prioritized list of what to fix first.
     `,
   },
+  {
+    slug: "how-to-find-and-fix-broken-links",
+    title: "How to Find and Fix Broken Links on Your Website",
+    excerpt:
+      "Learn how to find broken links fast, understand why they hurt SEO and user trust, and fix them the right way with redirects.",
+    date: "2026-07-23",
+    readTime: "9 min read",
+    category: "Technical SEO",
+    keywords: [
+      "how to fix broken links",
+      "find broken links website",
+      "broken link checker",
+      "404 errors seo",
+      "fix 404 pages",
+      "redirect broken links",
+      "broken link building",
+      "website link audit",
+    ],
+    image: "/blog-images/fix-broken-links-hero.jpg",
+    imageAlt: "Close-up of a broken metal chain link with a laptop screen visible in the background",
+    content: `
+## Why Broken Links Quietly Cost You More Than You Think
+
+A broken link feels like a small thing until you add up how often it happens across a growing site. Products get discontinued, blog posts get renamed, entire sections get restructured during a redesign, and every one of those changes can leave old links pointing at pages that no longer exist.
+
+The damage shows up in two places at once. Visitors land on a dead end and often leave the site entirely instead of digging around to find what they wanted. Search engines, meanwhile, treat broken links as a small but real quality signal, and a site with many of them can look neglected even if the actual content is solid.
+
+Running a scan with our [free SEO audit tool](/audit) will catch a lot of these automatically, but it's worth understanding the full process so you can fix them properly rather than just patching the symptoms.
+
+## How to Actually Find Broken Links
+
+### Use a Site Crawler
+
+Tools built for crawling a full site, rather than checking one page at a time, are the fastest way to find broken links at scale. They follow every internal and external link on your site and report which ones return an error.
+
+### Check Google Search Console
+
+Under the Pages report in [Google Search Console](https://search.google.com/search-console/about), Google shows you which URLs on your site are returning 404 errors that it has actually tried to crawl. This is especially useful because it reflects real crawl activity, not just a theoretical scan.
+
+![Laptop screen displaying a clean 404 page not found error](/blog-images/fix-broken-links-1.jpg)
+
+### Review Your Analytics for 404 Pages
+
+If your site has a custom 404 page, checking your analytics for how often people land on it, and from where, tells you which broken links are actually affecting real visitors, not just search engine crawlers.
+
+### Don't Forget External Links
+
+Broken links aren't only internal. Any outbound link you've added to a source, a tool, or a reference article can go dead if that other site changes its structure or shuts down. These are just as worth checking, since a page full of dead outbound links looks unmaintained too.
+
+## Understanding the Different Fixes
+
+Not every broken link should be fixed the same way, and picking the wrong fix can waste the work you put in.
+
+### 301 Redirect
+
+Use this when the content that used to live at the broken URL now exists somewhere else on your site. A 301 redirect tells both browsers and search engines that the move is permanent, and it passes along most of the original page's ranking value to the new location.
+
+### Restore the Original Page
+
+If a page was removed by mistake, or if it still had value and traffic, sometimes the right fix is simply bringing it back rather than redirecting it elsewhere.
+
+### Update the Link Itself
+
+If a broken link exists because you linked to the wrong URL somewhere, or a typo crept in, the cleanest fix is correcting the link directly rather than adding a redirect layer to compensate for it.
+
+### Custom 404 Page
+
+For links that genuinely no longer have a relevant destination, at minimum make sure your 404 page is helpful. Include a search bar, links to popular sections, and clear navigation so visitors aren't stuck at a dead end.
+
+![Redirect manager dashboard showing a broken link being fixed with a permanent redirect](/blog-images/fix-broken-links-2.jpg)
+
+## Setting Up Redirects Properly
+
+- Point old URLs to the most relevant new page, not just the homepage by default, since a relevant redirect preserves far more value for both users and search engines
+- Avoid redirect chains, where one redirect points to another redirect, which points to another. Update the original link to point directly to the final destination instead
+- Keep a record of your redirects somewhere accessible, since it's easy to lose track once a site has been through a few migrations
+- If you're on WordPress, most SEO plugins include a redirect manager, which our [WordPress SEO plugin guide](/blog/best-wordpress-seo-plugin-guide-2026) walks through setting up
+
+## Preventing Broken Links Going Forward
+
+- Before renaming or deleting any page, search your own site for internal links pointing to it and update them first
+- Set up an alert or recurring scan so new broken links get caught within weeks rather than sitting unnoticed for months
+- During any site migration or platform change, map old URLs to new ones before the switch happens, not after
+- Periodically re-check outbound links to external sources, since those are outside your control and can break without any warning
+
+## Frequently Asked Questions
+
+**Do broken links actually hurt my Google rankings?**
+Not usually as a direct penalty for one or two broken links, but a pattern of many broken links across a site is treated as a quality signal, and it can affect crawl efficiency since search engines spend time hitting dead ends instead of your real content.
+
+**Should I redirect every broken link to my homepage?**
+No. A generic homepage redirect is better than nothing, but it rarely satisfies what the visitor was originally looking for. Redirect to the closest relevant page whenever one exists.
+
+**How often should I check for broken links?**
+Monthly for an active site is a reasonable baseline, and immediately after any redesign, platform migration, or large content cleanup.
+
+**Can broken outbound links to other websites really matter?**
+Yes, though less than internal ones. A page full of dead external references signals that the content hasn't been maintained, which can affect how much visitors trust the page even if it doesn't directly change rankings.
+
+## Final Thoughts
+
+Broken links are one of the easiest technical SEO issues to both cause and fix. Most of them come from ordinary site changes rather than anything dramatic, which also means a regular check-and-fix routine, even a quick one every month, keeps this from ever becoming a real problem.
+
+Want to see if your site currently has any broken links? [Run a free SEO audit](/audit) and get a clear list of what needs attention.
+    `,
+  },
 ];
