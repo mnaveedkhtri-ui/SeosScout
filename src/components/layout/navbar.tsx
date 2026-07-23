@@ -9,7 +9,6 @@ const links = [
   { href: "/compare", label: "Compare" },
   { href: "/reports", label: "Reports" },
   { href: "/blog", label: "Blog" },
-  { href: "/pricing", label: "Free" },
 ];
 
 export function Navbar() {
