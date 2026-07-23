@@ -9,6 +9,7 @@ const SITE_NAME = "SiteScout";
 const DEFAULT_TITLE = "SiteScout | Free SEO Audit Tool for Technical, Content & On-Page SEO";
 const DEFAULT_DESCRIPTION =
   "Run a full technical, content, and on-page SEO audit on any website in under a minute. Get a 0 to 100 score, prioritized fixes, and shareable reports, completely free.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -59,17 +60,32 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "SiteScout",
-  applicationCategory: "SEO Tool",
-  operatingSystem: "Web",
-  url: SITE_URL,
-  description: DEFAULT_DESCRIPTION,
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-  },
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      name: "SiteScout",
+      applicationCategory: "SEO Tool",
+      operatingSystem: "Web",
+      url: SITE_URL,
+      description: DEFAULT_DESCRIPTION,
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+      },
+    },
+    {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: `${SITE_URL}/og-image.png`,
+    },
+    {
+      "@type": "WebSite",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+  ],
 };
 
 export default function RootLayout({
