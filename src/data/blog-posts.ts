@@ -500,4 +500,117 @@ Ecommerce SEO issues rarely show up as one obvious problem. They build up slowly
 Want a starting point for your own store? [Run a free SEO audit](/audit) and see exactly which of these areas need attention first.
     `,
   },
+  {
+    slug: "common-on-page-seo-mistakes-to-avoid",
+    title: "Common On-Page SEO Mistakes to Avoid in 2026",
+    excerpt:
+      "Avoid the most common on-page SEO mistakes, from bad titles to broken headings, and fix them before they quietly cost you rankings.",
+    date: "2026-07-23",
+    readTime: "10 min read",
+    category: "SEO Basics",
+    keywords: [
+      "on page seo mistakes",
+      "common seo mistakes",
+      "seo mistakes to avoid",
+      "on page seo checklist",
+      "title tag mistakes",
+      "meta description mistakes",
+      "heading structure seo",
+      "seo best practices",
+    ],
+    image: "/blog-images/onpage-seo-mistakes-hero.jpg",
+    imageAlt: "Laptop screen showing an SEO meta editor flagging a page title that is too long",
+    content: `
+## Why Small On-Page Mistakes Add Up
+
+On-page SEO mistakes rarely tank a site on their own. A slightly too long title tag, a skipped heading level, one missing alt tag, none of these will get a page removed from search results. The problem is that most struggling sites have several of these mistakes at once, spread across dozens or hundreds of pages, and together they quietly cap how well a site can perform.
+
+The good news is that these are also some of the easiest problems to find and fix. Running your pages through our [free SEO audit tool](/audit) will surface most of them automatically, but it helps to understand exactly what to look for and why each one matters.
+
+## Mistake 1: Title Tags That Are Too Long or Too Vague
+
+Title tags get cut off in search results once they pass around 60 characters, so anything longer just gets truncated with "...". Worse, a lot of sites stuff their title with every keyword variation they can think of, which reads as spammy and rarely improves rankings the way people expect.
+
+**The fix:** Keep titles under 60 characters, put the primary keyword near the front, and write it like something a person would actually want to click, not a keyword list.
+
+![SEO meta editor showing a page title flagged as too long next to a properly sized meta description](/blog-images/onpage-seo-mistakes-hero.jpg)
+
+## Mistake 2: Meta Descriptions That Get Ignored
+
+Meta descriptions don't directly affect rankings, but a missing or poorly written one means Google will often auto-generate a snippet from random page text instead, which rarely reads well and can hurt click-through rate.
+
+**The fix:** Write a unique meta description for every important page, around 150 to 160 characters, that clearly explains what the page offers and gives someone a reason to click.
+
+## Mistake 3: Skipping Heading Levels
+
+A surprising number of sites jump straight from an H1 to an H3 or H4, usually because a specific heading size looked better visually in the page builder. This breaks the logical structure that both screen readers and search engines rely on to understand a page.
+
+**The fix:** Use exactly one H1 per page, then move through H2 and H3 in order without skipping levels. If a smaller heading size is needed visually, style the correct heading tag with CSS rather than swapping in the wrong tag.
+
+![Diagram showing a broken heading hierarchy where H2 skips directly to H4, next to the correct H1 through H4 order](/blog-images/onpage-seo-mistakes-1.jpg)
+
+## Mistake 4: Missing or Lazy Alt Text
+
+Alt text serves two purposes at once: accessibility for people using screen readers, and a ranking signal for image search. Leaving it blank, or filling it with something generic like "image1.jpg", wastes both opportunities entirely.
+
+**The fix:** Write specific, descriptive alt text for every meaningful image. For decorative images that add no real content, an empty alt attribute is fine, but don't leave functional or product images without a description.
+
+![Product grid on a webpage with one image missing alt text, flagged with a red warning icon](/blog-images/onpage-seo-mistakes-2.jpg)
+
+## Mistake 5: Keyword Stuffing
+
+This one has mostly faded since Google got much better at understanding topic relevance without exact keyword repetition, but it still shows up, especially on older pages that haven't been revisited in years. Repeating the same phrase unnaturally throughout a page reads poorly and can actually work against rankings.
+
+**The fix:** Use your primary keyword naturally in the title, first paragraph, and a heading or two, then let related terms and synonyms carry the rest of the page. Google's own [guidance on helpful content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) is direct about writing for people first, not for a specific algorithm pattern.
+
+## Mistake 6: Thin or Duplicate Content
+
+Pages under 300 words trying to rank for competitive terms almost never perform well, since they simply don't cover enough to be useful. Duplicate content, whether it's the same page accessible through multiple URLs or copied text across pages, splits ranking signals instead of concentrating them.
+
+**The fix:** Combine thin, overlapping pages into fewer, more thorough ones. Use canonical tags when the same content is legitimately accessible through more than one URL.
+
+## Mistake 7: Broken or Missing Internal Links
+
+Pages that exist in isolation, with no links pointing to them from anywhere else on the site, are much harder for search engines to discover and rank. This happens often on older blog posts that never get referenced by newer content.
+
+**The fix:** Every time you publish something new, link back to two or three older, relevant pages. Our guide on [how to increase SEO on your website](/blog/how-to-increase-seo-of-your-website) covers internal linking strategy in more depth if this is an area you want to strengthen.
+
+## Mistake 8: Ignoring Mobile Layout
+
+Google evaluates the mobile version of a page first, not desktop, so a page that looks fine on a large monitor but breaks or requires horizontal scrolling on a phone will lose ranking potential regardless of how strong the content is.
+
+**The fix:** Test every important page on an actual phone, not just a resized browser window, and fix spacing, tap target size, and layout issues directly.
+
+## A Quick Self-Audit Checklist
+
+- Is every title tag under 60 characters and unique across the site
+- Does every page have a written, unique meta description
+- Does the heading structure go H1, then H2, then H3 without skipping levels
+- Does every meaningful image have specific alt text
+- Is the primary keyword used naturally, not repeated excessively
+- Is any page under 300 words for a competitive keyword
+- Does every page have at least one internal link pointing to it
+- Does the page work cleanly on an actual mobile device
+
+## Frequently Asked Questions
+
+**How many of these mistakes actually hurt rankings?**
+Heading structure, thin content, and missing internal links tend to have the clearest impact. Title and meta description issues affect click-through rate more directly than raw ranking position, but that still shapes real traffic.
+
+**Should I fix old posts or focus only on new content?**
+Both, but prioritize pages that already get some traffic or rank close to the first page. Small fixes on pages already performing decently often move the needle faster than perfecting brand new content.
+
+**Is keyword stuffing still something Google actively penalizes?**
+Yes, though it's usually treated as a quality signal rather than a specific penalty. Pages that read unnaturally tend to rank worse simply because they're less useful and less trusted by ranking systems.
+
+**How do I check all of this without going page by page manually?**
+Run your site through a [free SEO audit tool](/audit), which will flag most of these issues automatically across your pages instead of requiring a manual review of each one.
+
+## Final Thoughts
+
+None of these mistakes are complicated to fix individually. The reason they matter is that they tend to show up together, quietly limiting a site's performance across dozens of pages at once. Working through this list methodically, page by page, usually uncovers more quick wins than most site owners expect.
+
+Want to see which of these apply to your own pages? [Run a free SEO audit](/audit) and get a clear, prioritized list of what to fix first.
+    `,
+  },
 ];
