@@ -500,7 +500,7 @@ Ecommerce SEO issues rarely show up as one obvious problem. They build up slowly
 Want a starting point for your own store? [Run a free SEO audit](/audit) and see exactly which of these areas need attention first.
     `,
   },
-  {
+{
     slug: "common-on-page-seo-mistakes-to-avoid",
     title: "Common On-Page SEO Mistakes to Avoid in 2026",
     excerpt:
@@ -532,8 +532,6 @@ The good news is that these are also some of the easiest problems to find and fi
 Title tags get cut off in search results once they pass around 60 characters, so anything longer just gets truncated with "...". Worse, a lot of sites stuff their title with every keyword variation they can think of, which reads as spammy and rarely improves rankings the way people expect.
 
 **The fix:** Keep titles under 60 characters, put the primary keyword near the front, and write it like something a person would actually want to click, not a keyword list.
-
-![SEO meta editor showing a page title flagged as too long next to a properly sized meta description](/blog-images/onpage-seo-mistakes-hero.jpg)
 
 ## Mistake 2: Meta Descriptions That Get Ignored
 
