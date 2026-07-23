@@ -133,7 +133,7 @@ Not as a single official Google metric, but the underlying factors it measures, 
 Your SEO score is a diagnostic snapshot, not a vanity number. Use it as a starting point: run a scan, fix your lowest-scoring category first, and re-check every few weeks as you make changes. Small, consistent improvements compound over time into real ranking gains.
 
 Ready to see where you stand? [Run your free audit now](/audit) and get your personalized improvement checklist in under a minute.
-    `,
+    \`,
   },
   {
     slug: "best-wordpress-seo-plugin-guide-2026",
@@ -247,7 +247,7 @@ Run your site through a [free audit tool](/audit) after setup and compare it to 
 A WordPress SEO plugin is not a shortcut to page one, but it does clear out the technical clutter that quietly holds a lot of sites back. Pick one plugin, set it up properly using the steps above, and pair it with consistent internal linking and original content. That combination is what actually moves the needle over time.
 
 Want to check how your site looks right now? [Run your free audit](/audit) and see exactly what to fix next.
-    `,
+    \`,
   },
   {
     slug: "how-to-increase-seo-of-your-website",
@@ -366,7 +366,7 @@ Not as a direct ranking factor, but content that gets shared often ends up earni
 Increasing your SEO isn't about one dramatic change, it's about fixing the technical basics, tightening up on-page details, publishing content that's genuinely useful, linking your pages together properly, and earning links over time. None of these steps are complicated on their own. The results come from doing all of them consistently rather than looking for a single shortcut.
 
 Not sure where your site currently stands? [Run a free SEO audit](/audit) and get a clear, prioritized list of what to fix first.
-    `,
+    \`,
   },
   {
     slug: "ecommerce-seo-audit-checklist",
@@ -498,9 +498,9 @@ Both can perform well with the right setup. WooCommerce gives more direct contro
 Ecommerce SEO issues rarely show up as one obvious problem. They build up slowly through duplicate filter pages, thin category content, and product pages that never got proper titles or descriptions in the first place. Working through this checklist once, then repeating it every couple of months, catches most of these issues before they start costing meaningful traffic and sales.
 
 Want a starting point for your own store? [Run a free SEO audit](/audit) and see exactly which of these areas need attention first.
-    `,
+    \`,
   },
-{
+  {
     slug: "common-on-page-seo-mistakes-to-avoid",
     title: "Common On-Page SEO Mistakes to Avoid in 2026",
     excerpt:
@@ -573,6 +573,8 @@ Pages that exist in isolation, with no links pointing to them from anywhere else
 
 **The fix:** Every time you publish something new, link back to two or three older, relevant pages. Our guide on [how to increase SEO on your website](/blog/how-to-increase-seo-of-your-website) covers internal linking strategy in more depth if this is an area you want to strengthen.
 
+![Redirect manager dashboard showing a broken link being fixed with a permanent redirect](/blog-images/fix-broken-links-2.jpg)
+
 ## Mistake 8: Ignoring Mobile Layout
 
 Google evaluates the mobile version of a page first, not desktop, so a page that looks fine on a large monitor but breaks or requires horizontal scrolling on a phone will lose ranking potential regardless of how strong the content is.
@@ -609,7 +611,7 @@ Run your site through a [free SEO audit tool](/audit), which will flag most of t
 None of these mistakes are complicated to fix individually. The reason they matter is that they tend to show up together, quietly limiting a site's performance across dozens of pages at once. Working through this list methodically, page by page, usually uncovers more quick wins than most site owners expect.
 
 Want to see which of these apply to your own pages? [Run a free SEO audit](/audit) and get a clear, prioritized list of what to fix first.
-    `,
+    \`,
   },
   {
     slug: "how-to-find-and-fix-broken-links",
@@ -680,8 +682,6 @@ If a broken link exists because you linked to the wrong URL somewhere, or a typo
 
 For links that genuinely no longer have a relevant destination, at minimum make sure your 404 page is helpful. Include a search bar, links to popular sections, and clear navigation so visitors aren't stuck at a dead end.
 
-![Redirect manager dashboard showing a broken link being fixed with a permanent redirect](/blog-images/fix-broken-links-2.jpg)
-
 ## Setting Up Redirects Properly
 
 - Point old URLs to the most relevant new page, not just the homepage by default, since a relevant redirect preserves far more value for both users and search engines
@@ -715,6 +715,6 @@ Yes, though less than internal ones. A page full of dead external references sig
 Broken links are one of the easiest technical SEO issues to both cause and fix. Most of them come from ordinary site changes rather than anything dramatic, which also means a regular check-and-fix routine, even a quick one every month, keeps this from ever becoming a real problem.
 
 Want to see if your site currently has any broken links? [Run a free SEO audit](/audit) and get a clear list of what needs attention.
-    `,
+    \`,
   },
 ];
