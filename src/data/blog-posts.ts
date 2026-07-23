@@ -682,6 +682,8 @@ If a broken link exists because you linked to the wrong URL somewhere, or a typo
 
 For links that genuinely no longer have a relevant destination, at minimum make sure your 404 page is helpful. Include a search bar, links to popular sections, and clear navigation so visitors aren't stuck at a dead end.
 
+![Redirect manager dashboard showing a broken link being fixed with a permanent redirect](/blog-images/fix-broken-links-2.jpg)
+
 ## Setting Up Redirects Properly
 
 - Point old URLs to the most relevant new page, not just the homepage by default, since a relevant redirect preserves far more value for both users and search engines
