@@ -717,7 +717,7 @@ Broken links are one of the easiest technical SEO issues to both cause and fix. 
 Want to see if your site currently has any broken links? [Run a free SEO audit](/audit) and get a clear list of what needs attention.
     `,
   },
-  {
+{
     slug: "core-web-vitals-checker-guide",
     title: "Core Web Vitals Checker: How to Test and Fix Your Scores",
     excerpt:
@@ -750,8 +750,6 @@ Running a check with our [free SEO audit tool](/audit) will show you where your 
 
 LCP measures how long it takes for the largest visible element on the page, usually a hero image, a heading, or a large block of text, to fully render. A good score is under 2.5 seconds. Slow LCP is almost always caused by large unoptimized images, slow server response times, or render-blocking scripts loading before the main content.
 
-![Old-fashioned stopwatch resting on a glowing tablet screen showing a webpage loading progress bar](/blog-images/core-web-vitals-1.jpg)
-
 ### Interaction to Next Paint (INP)
 
 INP replaced the older First Input Delay metric and measures how quickly a page responds after someone clicks, taps, or types. A good score is under 200 milliseconds. Heavy JavaScript execution, particularly scripts that block the main thread, is the most common cause of poor INP.
@@ -760,7 +758,7 @@ INP replaced the older First Input Delay metric and measures how quickly a page 
 
 CLS measures visual stability, specifically how much content unexpectedly shifts position while a page is loading. A good score is under 0.1. This usually happens when images or ads load without a reserved space, pushing text and buttons around after someone has already started reading or clicking.
 
-![Webpage layout showing an unstable image block shifting with a red bounding box next to a stable green-outlined text block](/blog-images/core-web-vitals-2.jpg)
+![Old-fashioned stopwatch resting on a glowing tablet screen showing a webpage loading progress bar](/blog-images/core-web-vitals-1.jpg)
 
 ## How to Check Your Core Web Vitals
 
@@ -794,6 +792,8 @@ For hands-on debugging, Chrome's built-in DevTools Performance panel lets you re
 - Always set explicit width and height attributes on images and video elements so the browser reserves space before the file loads
 - Reserve space for ads and embeds in advance rather than letting them push content down once they load
 - Avoid inserting new content above existing content unless it happens in direct response to a user action, like clicking a button
+
+![Webpage layout showing an unstable image block shifting with a red bounding box next to a stable green-outlined text block](/blog-images/core-web-vitals-2.jpg)
 
 ## A Simple Testing Routine
 
