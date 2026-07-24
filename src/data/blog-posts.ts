@@ -717,4 +717,113 @@ Broken links are one of the easiest technical SEO issues to both cause and fix. 
 Want to see if your site currently has any broken links? [Run a free SEO audit](/audit) and get a clear list of what needs attention.
     `,
   },
+  {
+    slug: "core-web-vitals-checker-guide",
+    title: "Core Web Vitals Checker: How to Test and Fix Your Scores",
+    excerpt:
+      "Use a core web vitals checker to test your site, understand LCP, INP, and CLS, and fix the issues that quietly hurt your rankings.",
+    date: "2026-07-24",
+    readTime: "10 min read",
+    category: "Technical SEO",
+    keywords: [
+      "core web vitals checker",
+      "core web vitals test",
+      "lcp inp cls",
+      "improve core web vitals",
+      "page speed checker",
+      "website performance test",
+      "core web vitals seo",
+      "fix core web vitals",
+    ],
+    image: "/blog-images/core-web-vitals-hero.jpg",
+    imageAlt: "Curved monitor showing three green Core Web Vitals gauges for loading speed, interactivity, and visual stability",
+    content: `
+## What Core Web Vitals Actually Measure
+
+Core Web Vitals are a set of three specific metrics Google uses to judge how a page actually feels to use, not just how fast it technically loads. A page can finish loading quickly on paper and still feel slow or frustrating if it takes a while to respond to clicks or if content jumps around while someone is trying to read it. These three metrics were built to capture that real experience.
+
+Running a check with our [free SEO audit tool](/audit) will show you where your Core Web Vitals currently stand alongside the rest of your technical SEO, but it helps to understand what each metric means before trying to fix anything.
+
+## The Three Metrics, Explained Simply
+
+### Largest Contentful Paint (LCP)
+
+LCP measures how long it takes for the largest visible element on the page, usually a hero image, a heading, or a large block of text, to fully render. A good score is under 2.5 seconds. Slow LCP is almost always caused by large unoptimized images, slow server response times, or render-blocking scripts loading before the main content.
+
+![Old-fashioned stopwatch resting on a glowing tablet screen showing a webpage loading progress bar](/blog-images/core-web-vitals-1.jpg)
+
+### Interaction to Next Paint (INP)
+
+INP replaced the older First Input Delay metric and measures how quickly a page responds after someone clicks, taps, or types. A good score is under 200 milliseconds. Heavy JavaScript execution, particularly scripts that block the main thread, is the most common cause of poor INP.
+
+### Cumulative Layout Shift (CLS)
+
+CLS measures visual stability, specifically how much content unexpectedly shifts position while a page is loading. A good score is under 0.1. This usually happens when images or ads load without a reserved space, pushing text and buttons around after someone has already started reading or clicking.
+
+![Webpage layout showing an unstable image block shifting with a red bounding box next to a stable green-outlined text block](/blog-images/core-web-vitals-2.jpg)
+
+## How to Check Your Core Web Vitals
+
+### Google PageSpeed Insights
+
+[PageSpeed Insights](https://pagespeed.web.dev/) is the most direct way to test any URL. It shows both lab data, a simulated test run on demand, and field data, which is real performance data collected from actual visitors over the past 28 days when enough traffic exists. Field data tends to be more reliable since it reflects real conditions rather than one simulated run.
+
+### Google Search Console
+
+The Core Web Vitals report in [Google Search Console](https://search.google.com/search-console/about) groups your pages by URL pattern and shows which ones are failing each metric across your whole site, which is more useful than testing one page at a time when you're trying to find patterns.
+
+### Chrome DevTools
+
+For hands-on debugging, Chrome's built-in DevTools Performance panel lets you record an actual page load and see exactly which scripts, images, or layout shifts are causing the slowdown, which is useful once you already know a page has an issue and need to find the specific cause.
+
+## Fixing Poor LCP
+
+- Compress and properly size images so the browser isn't downloading a much larger file than it needs to display
+- Use a modern image format like WebP, which produces smaller file sizes than JPEG or PNG at similar quality
+- Preload the largest content element if it's not immediately visible in the page's initial HTML
+- Reduce server response time, since a slow backend delays everything that depends on it
+
+## Fixing Poor INP
+
+- Break up long-running JavaScript tasks into smaller chunks so the browser can respond to input in between them
+- Defer or remove third party scripts that aren't essential to the core page experience, such as unused tracking pixels or chat widgets
+- Avoid attaching expensive logic directly to click or input event handlers when it can run afterward instead
+
+## Fixing Poor CLS
+
+- Always set explicit width and height attributes on images and video elements so the browser reserves space before the file loads
+- Reserve space for ads and embeds in advance rather than letting them push content down once they load
+- Avoid inserting new content above existing content unless it happens in direct response to a user action, like clicking a button
+
+## A Simple Testing Routine
+
+1. Run your homepage and top three or four traffic pages through [PageSpeed Insights](https://pagespeed.web.dev/)
+2. Note which of the three metrics is furthest from the "good" threshold on each page
+3. Fix the most common cause first, since one root issue, like an unoptimized hero image, often affects multiple pages at once
+4. Re-test after each fix rather than making several changes at once, so you know what actually worked
+5. Check the Search Console Core Web Vitals report monthly to catch new pages that start failing
+
+This kind of methodical testing pairs well with the broader approach covered in our guide on [how to increase SEO on your website](/blog/how-to-increase-seo-of-your-website), since Core Web Vitals are one piece of the larger technical foundation that guide walks through.
+
+## Frequently Asked Questions
+
+**Do Core Web Vitals really affect Google rankings?**
+Yes, they're part of Google's page experience signals, though content relevance still matters more overall. Poor Core Web Vitals are more likely to hold back a page that's already competing closely with others than to sink a page with clearly stronger content.
+
+**Why do my lab data and field data scores look different?**
+Lab data comes from a single simulated test run under controlled conditions, while field data reflects real visitors on real devices and connections, which vary a lot. Field data is generally the more accurate picture of actual user experience.
+
+**How often should I check Core Web Vitals?**
+Monthly for an active site is reasonable, and immediately after any major redesign, new third party script addition, or hosting change, since these are the most common causes of a sudden drop.
+
+**Can I fix Core Web Vitals without a developer?**
+Some fixes, like compressing images or removing unused plugins on WordPress, are manageable without deep technical knowledge. JavaScript-related INP issues usually need a developer's involvement to resolve properly.
+
+## Final Thoughts
+
+Core Web Vitals come down to three fairly specific, measurable things: does content appear quickly, does the page respond fast when someone interacts with it, and does the layout stay stable while it loads. None of these require guesswork to diagnose, and most of the fixes are well understood once you know which metric is actually causing the problem.
+
+Want to see where your site currently stands? [Run a free SEO audit](/audit) and check your Core Web Vitals alongside the rest of your technical SEO.
+    `,
+  },
 ];
