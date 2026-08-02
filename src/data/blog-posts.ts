@@ -573,6 +573,8 @@ Pages that exist in isolation, with no links pointing to them from anywhere else
 
 **The fix:** Every time you publish something new, link back to two or three older, relevant pages. Our guide on [how to increase SEO on your website](/blog/how-to-increase-seo-of-your-website) covers internal linking strategy in more depth if this is an area you want to strengthen.
 
+![Redirect manager dashboard showing a broken link being fixed with a permanent redirect](/blog-images/fix-broken-links-2.jpg)
+
 ## Mistake 8: Ignoring Mobile Layout
 
 Google evaluates the mobile version of a page first, not desktop, so a page that looks fine on a large monitor but breaks or requires horizontal scrolling on a phone will lose ranking potential regardless of how strong the content is.
@@ -717,7 +719,7 @@ Broken links are one of the easiest technical SEO issues to both cause and fix. 
 Want to see if your site currently has any broken links? [Run a free SEO audit](/audit) and get a clear list of what needs attention.
     `,
   },
-{
+  {
     slug: "core-web-vitals-checker-guide",
     title: "Core Web Vitals Checker: How to Test and Fix Your Scores",
     excerpt:
@@ -921,6 +923,6 @@ Pages that are accidentally blocked from indexing, since this means Google may n
 A technical SEO audit service is really just a structured way of running through the same checklist covered here: crawlability, speed, structure, and indexing. For most small and mid-sized sites, working through that checklist yourself with free tools covers nearly everything a paid service would find, and it's worth trying before committing to an ongoing retainer.
 
 Ready to see where your site stands? [Run your free technical audit](/audit) and get a prioritized list of what to fix first.
-    \`,
+    `,
   },
 ];
