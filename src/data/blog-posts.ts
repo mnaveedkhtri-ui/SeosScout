@@ -877,7 +877,9 @@ Pricing varies a lot depending on site size and depth, but a few general pattern
 - **Ongoing retainers** that include monthly monitoring and re-audits add a recurring cost on top of the initial audit
 
 The price mostly reflects site size and how much manual analysis is layered on top of automated crawling, not necessarily a difference in the underlying checklist.
- image: "/blog-images/technical-seo-audit-1.jpg",
+
+![Freelancer reviewing a technical SEO audit report with pricing and checklist items](/blog-images/technical-seo-audit-1.jpg)
+
 ## How Much You Can Do Yourself for Free
 
 Most of what a paid technical audit covers can be checked without paying anyone. Start with a full site scan, fix Core Web Vitals issues using the specific thresholds mentioned above, tighten up internal linking so pages aren't buried too deep in the site structure, and clean up any broken links or redirect chains that have built up over time.
@@ -894,7 +896,9 @@ Self-auditing has real limits, and there are situations where bringing in a paid
 - **Ongoing monitoring at scale**, where a retainer buys continuous tracking rather than a single snapshot
 
 If none of those apply to your situation, a self-audit using free tools usually gets you 80 to 90 percent of the value at no cost.
- image: "/blog-images/technical-seo-audit-2.jpg",
+
+![Checklist of technical SEO tasks being checked off during a site migration](/blog-images/technical-seo-audit-2.jpg)
+
 ## A Simple DIY Audit Routine
 
 - Week 1: Run a full audit and fix the highest-priority technical issues first
