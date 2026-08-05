@@ -1030,8 +1030,6 @@ Moz's On-Page Grader checks a URL against a target keyword and scores how well i
 
 This kind of routine works well alongside the broader approach in our guide on [how to increase SEO on your website](/blog/how-to-increase-seo-of-your-website), since Bing and Moz cover the indexing and authority pieces of that same overall framework.
 
-![Curved widescreen monitor showing a keyword ranking table with up and down arrows next to a backlink count widget](/blog-images/bing-webmaster-moz-3.jpg)
-
 ## Common Mistakes to Avoid
 
 - **Verifying but never submitting a sitemap**, which leaves Bing relying entirely on link discovery to find new pages
