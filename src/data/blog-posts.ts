@@ -9,6 +9,8 @@ export interface BlogPost {
   keywords: string[];
   image: string;
   imageAlt: string;
+  author?: string;
+  views?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -1066,7 +1068,8 @@ Want to see how your site's fundamentals look before diving into either tool? [R
     title: "AI & LLM SEO Audits: How to Prepare Your Site for AI Overviews in 2026",
     excerpt:
       "What an AI and LLM SEO audit actually checks in 2026, what Google's own guidance confirms works, and which trending GEO tactics you can safely skip.",
-    date: "July 28, 2026",
+    date: "2026-07-28",
+    readTime: "9 min read",
     author: "Naveed Khatri",
     views: "0",
     category: "AI SEO",
