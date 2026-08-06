@@ -45,33 +45,84 @@ function formatInline(text: string) {
   return result;
 }
 
+function parseTableRow(line: string) {
+  // Strip leading/trailing pipe, split on unescaped pipes
+  return line
+    .replace(/^\|/, "")
+    .replace(/\|$/, "")
+    .split("|")
+    .map((cell) => cell.trim());
+}
+
+function isTableSeparator(line: string) {
+  // e.g. |------|------------------|--------------------------|
+  return /^\|?\s*:?-+:?\s*(\|\s*:?-+:?\s*)+\|?$/.test(line);
+}
+
 function renderContent(content: string) {
   const lines = content.split("\n");
   let html = "";
   let inList = false;
-  for (const rawLine of lines) {
-    const line = rawLine.trim();
+  let i = 0;
+
+  const closeList = () => {
+    if (inList) { html += "</ul>"; inList = false; }
+  };
+
+  while (i < lines.length) {
+    const line = lines[i].trim();
+
+    // Markdown table: a "| ... |" header row followed by a "|---|---|" separator row
+    if (
+      line.startsWith("|") &&
+      i + 1 < lines.length &&
+      isTableSeparator(lines[i + 1].trim())
+    ) {
+      closeList();
+      const headerCells = parseTableRow(line);
+      html += '<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">';
+      html += '<thead><tr class="border-b border-zinc-700">';
+      for (const cell of headerCells) {
+        html += `<th class="text-left font-semibold text-white px-3 py-2">${formatInline(cell)}</th>`;
+      }
+      html += "</tr></thead><tbody>";
+
+      i += 2; // skip header + separator rows
+      while (i < lines.length && lines[i].trim().startsWith("|")) {
+        const rowCells = parseTableRow(lines[i].trim());
+        html += '<tr class="border-b border-zinc-800">';
+        for (const cell of rowCells) {
+          html += `<td class="text-zinc-300 px-3 py-2 align-top">${formatInline(cell)}</td>`;
+        }
+        html += "</tr>";
+        i++;
+      }
+      html += "</tbody></table></div>";
+      continue;
+    }
+
     const imageMatch = line.match(/^!\[(.*?)\]\((.+?)\)$/);
     if (imageMatch) {
-      if (inList) { html += "</ul>"; inList = false; }
+      closeList();
       html += `<img src="${imageMatch[2]}" alt="${imageMatch[1]}" class="rounded-xl w-full my-6" />`;
     } else if (line.startsWith("## ")) {
-      if (inList) { html += "</ul>"; inList = false; }
+      closeList();
       html += `<h2 class="text-2xl sm:text-3xl font-bold text-white mt-10 mb-4">${formatInline(line.slice(3))}</h2>`;
     } else if (line.startsWith("### ")) {
-      if (inList) { html += "</ul>"; inList = false; }
+      closeList();
       html += `<h3 class="text-xl font-semibold text-white mt-8 mb-3">${formatInline(line.slice(4))}</h3>`;
     } else if (line.startsWith("- ")) {
       if (!inList) { html += '<ul class="list-disc pl-6 mb-5 space-y-2">'; inList = true; }
       html += `<li class="text-zinc-300">${formatInline(line.slice(2))}</li>`;
     } else if (line === "") {
-      if (inList) { html += "</ul>"; inList = false; }
+      closeList();
     } else {
-      if (inList) { html += "</ul>"; inList = false; }
+      closeList();
       html += `<p class="text-zinc-300 mb-5 leading-relaxed">${formatInline(line)}</p>`;
     }
+    i++;
   }
-  if (inList) html += "</ul>";
+  closeList();
   return html;
 }
 
