@@ -80,23 +80,28 @@ function renderContent(content: string) {
     ) {
       closeList();
       const headerCells = parseTableRow(line);
-      html += '<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">';
-      html += '<thead><tr class="border-b border-zinc-700">';
+      html += '<div class="overflow-x-auto my-8 rounded-xl border border-zinc-800">';
+      html += '<table class="w-full text-sm border-collapse">';
+      html += '<thead><tr class="bg-zinc-900">';
       for (const cell of headerCells) {
-        html += `<th class="text-left font-semibold text-white px-3 py-2">${formatInline(cell)}</th>`;
+        html += `<th class="text-left font-semibold text-white px-5 py-3.5">${formatInline(cell)}</th>`;
       }
       html += "</tr></thead><tbody>";
 
       i += 2; // skip header + separator rows
+      const bodyRows: string[][] = [];
       while (i < lines.length && lines[i].trim().startsWith("|")) {
-        const rowCells = parseTableRow(lines[i].trim());
-        html += '<tr class="border-b border-zinc-800">';
-        for (const cell of rowCells) {
-          html += `<td class="text-zinc-300 px-3 py-2 align-top">${formatInline(cell)}</td>`;
-        }
-        html += "</tr>";
+        bodyRows.push(parseTableRow(lines[i].trim()));
         i++;
       }
+      bodyRows.forEach((rowCells, rowIdx) => {
+        const borderClass = rowIdx < bodyRows.length - 1 ? "border-b border-zinc-800" : "";
+        html += `<tr class="${borderClass}">`;
+        for (const cell of rowCells) {
+          html += `<td class="text-zinc-300 px-5 py-4 align-top leading-relaxed">${formatInline(cell)}</td>`;
+        }
+        html += "</tr>";
+      });
       html += "</tbody></table></div>";
       continue;
     }
